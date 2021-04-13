@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     container: {
         //backgroundColor: theme.palette.background.paper,
         //backgroundColor: 'transparent',
-        padding: theme.spacing(6, 0, 6),
+        padding: theme.spacing(0, 0, 6),
         margin:'5rem',
         [theme.breakpoints.down('sm')]:{
             padding: theme.spacing(0, 0, 6),
