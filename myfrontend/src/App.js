@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css';
-import {CssBaseline} from '@material-ui/core';
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {CssBaseline, Button} from '@material-ui/core';
 import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles'
 import Navbar from "./Navbar.js"
 import Footer from "./Footer.js"
@@ -56,23 +57,106 @@ function App() {
     
     return(
         <React.Fragment>
-            
+            <Router>
             <ThemeProvider theme={theme}>
             {<CssBaseline/>}
             <div className="NavBanner">
                 <Navbar/>
-                <Banner/> 
             </div>
-                <Wave/> 
-                <Pointer3/>
-                <LeftContainer/>
-                <RightContainer/>
-                {/*<Cards/>*/}
+            <Switch>
+                <Route exact path="/">
+                    <Home/>
+                </Route>
+                <Route path="/features">
+                    <Features/>
+                </Route>
+                <Route path="/faq">
+                    <FAQ/>
+                </Route>
+                <Route path="/pricing">
+                    <Pricing/>
+                </Route>
+                <Route path="/contact">
+                    <Contact/>
+                </Route>
+                <Route path="/login">
+                    <Login/>
+                </Route>
+                <Route path="*">
+                    <Page404 />
+                </Route>
+            </Switch>
+               
                 <Footer/>                   
             </ThemeProvider>
-            
+            </Router>
         </React.Fragment>
     )
 }
 
 export default App;
+
+function Home(){
+    return(
+        <div>
+        <div className="NavBanner">
+            <Banner/> 
+        </div>
+        <Wave/> 
+        <Pointer3/>
+        <LeftContainer/>
+        <RightContainer/>
+        {/*<Cards/>*/}
+        </div>
+    )
+}
+
+function Features(){
+    return(
+        <div>
+            <h1> Features Page </h1>
+        </div>
+    )
+}
+
+function FAQ(){
+    return(
+        <div>
+            <h1> FAQ Page </h1>
+        </div>
+    )
+}
+
+function Pricing(){
+    return(
+        <div>
+            <h1> Pricing Page </h1>
+        </div>
+    )
+}
+
+function Contact(){
+    return(
+        <div>
+            <h1> Contact Page </h1>
+        </div>
+    )
+}
+
+function Login(){
+    return(
+        <div>
+            <h1> Login Page </h1>
+        </div>
+    )
+}
+
+function Page404(){
+    return(
+        <div style={{textAlign:"center", padding:"10vh"}}>
+            <h1> Page Error: 404</h1>
+            <h1> Oops, this page could not be found</h1>
+            <Button variant="contained" color="primary" component={Link} to="/">Back to Home</Button>
+        </div>
+    )
+}

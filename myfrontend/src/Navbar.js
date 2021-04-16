@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import {
     AppBar,
     Toolbar,
@@ -98,7 +99,7 @@ function Navbar() {
             <div className={classes.toolbar} />
             
             <List>
-                <ListItem button component="a" href="/">
+                <ListItem button component={Link} to="/">
                     <ListItemIcon>
                         <HomeIcon/>
                     </ListItemIcon>
@@ -106,35 +107,35 @@ function Navbar() {
                             
                 </ListItem>
                 <Divider/>
-                <ListItem button component="a" href="/features">
+                <ListItem button component={Link} to="/features">
                     <ListItemIcon>
                         <AppsIcon/>
                     </ListItemIcon>
                     <ListItemText primary="Features"/> 
                 </ListItem>
                 <Divider/>
-                <ListItem button component="a" href="/pricing">
+                <ListItem button component={Link} to="/pricing">
                     <ListItemIcon>
                         <PaymentIcon/>
                     </ListItemIcon>
                     <ListItemText primary="Pricing"/> 
                 </ListItem>
                 <Divider/>
-                <ListItem button component="a" href="/faq">
+                <ListItem button component={Link} to="/faq">
                     <ListItemIcon>
                         <HelpIcon/>
                     </ListItemIcon>
                     <ListItemText primary="FAQ"/> 
                 </ListItem>
                 <Divider/>
-                <ListItem button component="a" href="/contact">
+                <ListItem button component={Link} to="/contact">
                     <ListItemIcon>
                         <MailIcon/>
                     </ListItemIcon>
                     <ListItemText primary="Contact Us"/> 
                 </ListItem>
                 <Divider/>
-                <ListItem button component="a" href="/login">
+                <ListItem button component={Link} to="/login">
                     <ListItemIcon>
                         <AccountBoxIcon/>
                     </ListItemIcon>
@@ -168,25 +169,27 @@ function Navbar() {
                         color="transparent"
                         className={classes.navTitle}
                     >
-                        <a className={classes.homeHref} href="/">
+                        <Link className={classes.homeHref} to="/">
                             TutorsDojo
-                        </a>
+                        </Link>
                     </Typography>
                     <div className={classes.navItems}>
                         <div className={classes.navHideMobile}>
-                            <Button href="/features">Features</Button>
-                            <Button href="/pricing">Pricing</Button>
-                            <Button href="/faq">FAQ</Button>
+                            <Button component={Link} to="/features">Features</Button>
+                            <Button component={Link} to="/pricing">Pricing</Button>
+                            <Button component={Link} to="/faq">FAQ</Button>
                         </div>
                         <div className={classes.loginDiv}>
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                className={classes.loginButton}
-                                disableElevation
-                            >
-                                Login
-                            </Button>
+                                <Button
+                                    component={Link}
+                                    to="/login"
+                                    variant="contained"
+                                    color="primary"
+                                    className={classes.loginButton}
+                                    disableElevation
+                                >
+                                    Login
+                                </Button>
                         </div>
                     </div>
                 </Toolbar>
