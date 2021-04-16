@@ -19,11 +19,13 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("sm")]: {
             display: "none",
         },
+        
     },
     tabContainer: {
         [theme.breakpoints.up("sm")]: {
             display: "none",
         },
+        
     },
 }));
 
@@ -48,11 +50,11 @@ function Features() {
                         onChange={tabStatus}
                         aria-label="disabled tabs example"
                     >
-                        <Tab label="Overview" component={Link} to="/features/overview"></Tab>
-                        <Tab label="Student Management" component={Link} to="/features/keeptrackofstudents"></Tab>
-                        <Tab label="Calendar Scheduling" component={Link} to="/features/calendarscheduling"></Tab>
-                        <Tab label="Automatic Reminders" component={Link} to="/features/automaticreminders"></Tab>
-                        <Tab label="Online Payments" component={Link} to="/features/onlinepayments"></Tab>
+                        <Tab style={{fontSize:"0.7rem"}} label="Overview" component={Link} to="/features/overview"></Tab>
+                        <Tab style={{fontSize:"0.7rem"}} label="Student Management" component={Link} to="/features/keeptrackofstudents"></Tab>
+                        <Tab style={{fontSize:"0.7rem"}} label="Calendar Scheduling" component={Link} to="/features/calendarscheduling"></Tab>
+                        <Tab style={{fontSize:"0.7rem"}} label="Automatic Reminders" component={Link} to="/features/automaticreminders"></Tab>
+                        <Tab style={{fontSize:"0.7rem"}} label="Online Payments" component={Link} to="/features/onlinepayments"></Tab>
                     </Tabs>
                 </Paper>
             </div>

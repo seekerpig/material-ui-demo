@@ -22,7 +22,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import HomeIcon from '@material-ui/icons/Home';
 import AppsIcon from '@material-ui/icons/Apps';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
-import HelpIcon from '@material-ui/icons/Help';
+//import HelpIcon from '@material-ui/icons/Help';
 import PaymentIcon from '@material-ui/icons/Payment';
 
 const drawerWidth = 240;
@@ -122,13 +122,14 @@ function Navbar() {
                     <ListItemText primary="Pricing"/> 
                 </ListItem>
                 <Divider/>
+                {/*
                 <ListItem button component={Link} to="/faq">
                     <ListItemIcon>
                         <HelpIcon/>
                     </ListItemIcon>
                     <ListItemText primary="FAQ"/> 
                 </ListItem>
-                <Divider/>
+                <Divider/>*/}
                 <ListItem button component={Link} to="/contact">
                     <ListItemIcon>
                         <MailIcon/>
@@ -178,7 +179,7 @@ function Navbar() {
                         <div className={classes.navHideMobile}>
                             <Button component={Link} to="/features">Features</Button>
                             <Button component={Link} to="/pricing">Pricing</Button>
-                            <Button component={Link} to="/faq">FAQ</Button>
+                            {/*<Button component={Link} to="/faq">FAQ</Button>*/}
                         </div>
                         <div className={classes.loginDiv}>
                                 <Button

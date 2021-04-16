@@ -6,12 +6,14 @@ import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles'
 import Navbar from "./Navbar.js"
 import Footer from "./Footer.js"
 import Banner from "./Banner.js"
+import PriceBanner from "./PriceBanner"
 //import Cards from "./Cards.js"
 import Wave from "./Wave.js"
 import Pointer3 from "./Pointer3.js"
 import LeftContainer from "./LeftContainer";
 import RightContainer from "./RightContainer";
 import Features from "./Features"
+import FormComponent from "./Form"
 
 //import { orange } from '@material-ui/core/colors';
 
@@ -127,16 +129,15 @@ function FAQ(){
 function Pricing(){
     return(
         <div>
-            <h1> Pricing Page </h1>
+            <PriceBanner/>
         </div>
     )
 }
 
 function Contact(){
     return(
-        <div>
-            <h1> Contact Page </h1>
-        </div>
+
+            <FormComponent/>
     )
 }
 
