@@ -79,6 +79,7 @@ const useStyles = makeStyles((theme) => ({
     toolbar: {
         [theme.breakpoints.down("xs")]: {
             paddingTop: "10px",
+            paddingBottom: "10px",
         },
     },
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css';
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, Link, Redirect} from "react-router-dom";
 import {CssBaseline, Button} from '@material-ui/core';
 import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles'
 import Navbar from "./Navbar.js"
@@ -11,6 +11,8 @@ import Wave from "./Wave.js"
 import Pointer3 from "./Pointer3.js"
 import LeftContainer from "./LeftContainer";
 import RightContainer from "./RightContainer";
+import Features from "./Features"
+
 //import { orange } from '@material-ui/core/colors';
 
 
@@ -68,6 +70,7 @@ function App() {
                     <Home/>
                 </Route>
                 <Route path="/features">
+                    <Redirect to="/features/overview"/>
                     <Features/>
                 </Route>
                 <Route path="/faq">
@@ -111,13 +114,7 @@ function Home(){
     )
 }
 
-function Features(){
-    return(
-        <div>
-            <h1> Features Page </h1>
-        </div>
-    )
-}
+
 
 function FAQ(){
     return(
