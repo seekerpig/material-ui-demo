@@ -1,6 +1,5 @@
 import React from 'react'
 import {Container, Grid, Typography} from '@material-ui/core'
-import img2 from './MSB-tablet-2.png';
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -19,22 +18,19 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-function RightContainer() {
+function RightContainer({image,title,subtitle}) {
     const classes = useStyles();
     return (
         <div className={classes.container}>
             <Container maxWidth="md" >
                 <Grid container spacing={5} alignItems="center" className={classes.gridreverse}>
                     <Grid item xs={12} md={6}>
-                        <img alt="Calendar" src={img2}></img>
+                        <img alt={title} src={require(`${image}`).default} />
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Typography variant="h5" align="right">Automated Billing</Typography>
+                        <Typography variant="h5" align="right">{title}</Typography>
                         <Typography variant="body1" align="right">
-                            Stop fussing over having to ask students for lesson payments,
-                            instead, we will help you send payment reminders, invoices and ensure that students complete
-                            their payments on time! We even have an analytics for payment, to show outstanding payments,
-                            how much you've earnt this month and etc.
+                            {subtitle}
                         </Typography>
                     </Grid>
                 </Grid>

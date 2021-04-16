@@ -104,8 +104,8 @@ function Home(){
         </div>
         <Wave/> 
         <Pointer3/>
-        <LeftContainer/>
-        <RightContainer/>
+        <LeftContainer image="./images/calendar.png" title="Smart Calendar" subtitle="A smart calendar that allows the tutor to showcase open slots, send SMS and email lesson reminders, take attendance, send date proposal and even allow your students to see your opening lesson timings."/>
+        <RightContainer image="./images/billingTablet.png" title="Automated Billing" subtitle="Stop fussing over having to ask students for lesson payments, instead, we will help you send payment reminders, invoices and ensure that students complete their payments on time! We even have an analytics for payment, to show outstanding payments, how much you've earnt this month and etc."/>
         {/*<Cards/>*/}
         </div>
     )
