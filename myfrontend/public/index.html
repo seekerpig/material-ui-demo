@@ -42,9 +42,17 @@
 
         <!-- Initialize Firebase -->
         <script src="/__/firebase/init.js"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+
         <script>
+            // Your web app's Firebase configuration
             // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-            const firebaseConfig = {
+            var firebaseConfig = {
                 apiKey: "AIzaSyB6fXHWYomeowGda87mAeZsuuMdRf5Vook",
                 authDomain: "tutor-app-8318e.firebaseapp.com",
                 projectId: "tutor-app-8318e",
@@ -53,6 +61,9 @@
                 appId: "1:532524773202:web:ffefc31c7c358aa91fd48b",
                 measurementId: "G-W6R8HWM42Y",
             };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
         </script>
 
         <noscript>You need to enable JavaScript to run this app.</noscript>
