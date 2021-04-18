@@ -1,20 +1,28 @@
-import * as firebase from "firebase/app"
+import firebase from "firebase/app";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
-import {firebaseConfig} from "./firebaseConfig";
 
 // If you enabled Analytics in your project, add the Firebase SDK for Analytics
 import "firebase/analytics";
-
 // Add the Firebase products that you want to use
 import "firebase/auth";
 import "firebase/firestore";
 
+export const firebaseConfig = {
+  apiKey: "AIzaSyB6fXHWYomeowGda87mAeZsuuMdRf5Vook",
+  authDomain: "tutor-app-8318e.firebaseapp.com",
+  projectId: "tutor-app-8318e",
+  storageBucket: "tutor-app-8318e.appspot.com",
+  messagingSenderId: "532524773202",
+  appId: "1:532524773202:web:ffefc31c7c358aa91fd48b",
+  measurementId: "G-W6R8HWM42Y"
+};
 
 firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 const analytics = firebase.analytics();
 
 firebase.analytics().logEvent('notification_received');
