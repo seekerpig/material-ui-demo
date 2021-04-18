@@ -1,8 +1,24 @@
+import * as firebase from "firebase/app"
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import {firebaseConfig} from "./firebaseConfig";
+
+// If you enabled Analytics in your project, add the Firebase SDK for Analytics
+import "firebase/analytics";
+
+// Add the Firebase products that you want to use
+import "firebase/auth";
+import "firebase/firestore";
+
+
+firebase.initializeApp(firebaseConfig);
+const analytics = firebase.analytics();
+
+firebase.analytics().logEvent('notification_received');
+
 
 ReactDOM.render(
   <React.StrictMode>
