@@ -23,7 +23,7 @@ export const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
-const analytics = firebase.analytics();
+
 
 firebase.analytics().logEvent('notification_received');
 
