@@ -137,7 +137,7 @@ function Navbar() {
                     <ListItemText primary="Contact Us"/> 
                 </ListItem>
                 <Divider/>
-                <ListItem button component={Link} to="/login">
+                <ListItem button href="app.tutorsdojo.com">
                     <ListItemIcon>
                         <AccountBoxIcon/>
                     </ListItemIcon>
@@ -179,6 +179,7 @@ function Navbar() {
                         <div className={classes.navHideMobile}>
                             <Button component={Link} to="/features">Features</Button>
                             <Button component={Link} to="/pricing">Pricing</Button>
+                            <Button href="app.tutorsdojo.com">Contact</Button>
                             {/*<Button component={Link} to="/faq">FAQ</Button>*/}
                         </div>
                         <div className={classes.loginDiv}>
