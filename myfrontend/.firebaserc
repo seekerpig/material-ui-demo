@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "tutor-app-8318e"
+  },
+  "targets": {
+    "tutor-app-8318e": {
+      "hosting": {
+        "frontend": [
+          "tutor-app-8318e"
+        ]
+      }
+    }
   }
 }
