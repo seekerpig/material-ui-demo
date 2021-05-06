@@ -5,7 +5,6 @@ import {
     TextField,
     Button,
     Typography,
-    Paper,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { init } from "emailjs-com";
@@ -21,8 +20,16 @@ const useStyles = makeStyles((theme) => ({
     divider: {
         marginBottom: theme.spacing(1),
     },
-    paperCard: {
-        padding: 20,
+
+    inputFont: {
+        fontSize: "0.9rem",
+    },
+
+    title:{
+        fontSize:"2rem",
+        [theme.breakpoints.down("md")]: {
+            fontSize:"1.5rem",
+        },
     },
 }));
 
@@ -52,8 +59,7 @@ function Form() {
     return (
         <form className={classes.container} onSubmit={sendEmail}>
             <Container maxWidth="sm">
-                <Paper className={classes.paperCard}>
-                    <Typography variant="h1" align="center" gutterBottom>
+                    <Typography className={classes.title} variant="h4" align="center" gutterBottom>
                         Contact Us
                     </Typography>
                     <Grid container direction="column">
@@ -62,6 +68,11 @@ function Form() {
                                 variant="outlined"
                                 placeholder="Your Name"
                                 inputProps={{ "aria-label": "Your Name" }}
+                                InputProps={{
+                                    classes: {
+                                        input: classes.inputFont,
+                                    },
+                                }}
                                 fullWidth
                                 required
                                 name="user_name"
@@ -72,6 +83,11 @@ function Form() {
                                 variant="outlined"
                                 placeholder="Email Address"
                                 inputProps={{ "aria-label": "Email Address" }}
+                                InputProps={{
+                                    classes: {
+                                        input: classes.inputFont,
+                                    },
+                                }}
                                 fullWidth
                                 required
                                 name="user_email"
@@ -82,6 +98,11 @@ function Form() {
                                 variant="outlined"
                                 placeholder="Contact Number (Optional)"
                                 inputProps={{ "aria-label": "Contact Number" }}
+                                InputProps={{
+                                    classes: {
+                                        input: classes.inputFont,
+                                    },
+                                }}
                                 fullWidth
                                 name="contact_number"
                             />
@@ -92,6 +113,11 @@ function Form() {
                                 multiline
                                 placeholder="Message"
                                 inputProps={{ "aria-label": "Message" }}
+                                InputProps={{
+                                    classes: {
+                                        input: classes.inputFont,
+                                    },
+                                }}
                                 rows={4}
                                 fullWidth
                                 required
@@ -114,7 +140,6 @@ function Form() {
                             </Grid>
                         </Grid>
                     </Grid>
-                </Paper>
             </Container>
         </form>
     );

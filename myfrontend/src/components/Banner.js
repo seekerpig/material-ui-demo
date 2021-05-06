@@ -1,8 +1,7 @@
 import React from "react";
 import { Typography, Grid, Button, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-
+import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 
 const useStyles = makeStyles((theme) => ({
     buttons: {
@@ -10,10 +9,16 @@ const useStyles = makeStyles((theme) => ({
     },
     container: {
         //backgroundColor: theme.palette.background.paper,
-        backgroundColor: 'transparent',
+        backgroundColor: "transparent",
         padding: theme.spacing(15, 0, 0),
-        [theme.breakpoints.down('md')]:{
+        [theme.breakpoints.down("md")]: {
             padding: theme.spacing(5, 0, 5),
+        },
+    },
+    bannerBody: {
+        fontSize: "1.0rem",
+        [theme.breakpoints.up("md")]: {
+            fontSize: "1.2rem",
         },
     },
 }));
@@ -24,25 +29,30 @@ function Banner() {
         <div className={classes.container}>
             <Container maxWidth="md">
                 <Typography
-                    
                     variant="h1"
                     align="center"
                     color="textPrimary"
                     gutterBottom
-                    style={{fontWeight:800}}
-                    
+                    style={{ fontWeight: 800 }}
                 >
                     Automate & <br></br>Manage Students
                 </Typography>
-                <Typography
-                    variant="h6"
-                    align="center"
-                    color="textSecondary"
-                    paragraph
-                >
-                    The #1 tutor management software for private tutors, tutoring centers and test prep centers. 
-                    Manage your students, schedule, billing, online tutoring and much more! <br/><br/>Whatever your goal, we can help.
-                </Typography>
+                <Container maxWidth="md">
+                    <Typography
+                        variant="body1"
+                        align="center"
+                        className={classes.bannerBody}
+                        paragraph
+                    >
+                        The #1 Tutor management software for freelance tutors,
+                        tuition centres and schools. Automate attendance,
+                        schedule, billing, online tutoring and much more! <br />
+                        <br />
+                        Let us help you manage, so that you can just focus on
+                        teaching.
+                    </Typography>
+                </Container>
+
                 <div className={classes.buttons}>
                     <Grid container spacing={2} justify="center">
                         <Grid item>
@@ -51,8 +61,12 @@ function Banner() {
                             </Button>
                         </Grid>
                         <Grid item>
-                            <Button variant="contained" color="primary" endIcon ={<ArrowRightIcon/>}>
-                                Demo 
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                endIcon={<ArrowRightIcon />}
+                            >
+                                Demo
                             </Button>
                         </Grid>
                     </Grid>

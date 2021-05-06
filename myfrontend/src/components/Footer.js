@@ -28,19 +28,11 @@ const useStyles = makeStyles((theme) => ({
 const footers = [
     {
       title: 'Company',
-      description: ['Team', 'History', 'Contact us', 'Locations'],
+      description: [{title:'Home',link:'/'}, {title:'Pricing',link:'/pricing'}, {title:'Contact Us',link:'/contact'}, {title:'Get Started',link:'/https://app.tutorsdojo.com'}],
     },
     {
       title: 'Features',
-      description: ['Cool stuff', 'Random feature', 'Team feature', 'Developer stuff', 'Another one'],
-    },
-    {
-      title: 'Resources',
-      description: ['Resource', 'Resource name', 'Another resource', 'Final resource'],
-    },
-    {
-      title: 'Legal',
-      description: ['Privacy policy', 'Terms of use'],
+      description: [{title:'Overview',link:'/features/overview'}, {title:'Student Management',link:'/features/keeptrackofstudents'}, {title:'Calender Scheduling',link:'/features/automaticreminders'}, {title:'Automatic Reminder',link:'/features/calendarscheduling'}, {title:'Online Payments',link:'/features/onlinepayments'}],
     },
   ];
   
@@ -49,7 +41,7 @@ function Copyright() {
     return (
       <Typography variant="body2" color="textSecondary" align="center">
         {'Copyright © '}
-        <Link color="inherit" href="https://material-ui.com/">
+        <Link color="inherit" href="https://tutorsdojo.com/">
           TutorsDojo
         </Link>{' '}
         {new Date().getFullYear()}
@@ -90,11 +82,12 @@ function Footer() {
                                 {footer.description.map((item) => (
                                     <li key={item}>
                                         <Link
-                                            href="#"
-                                            variant="subtitle1"
+                                            href={item.link}
+                                            variant="subtitle2"
+                                            style={{fontSize:'0.9rem'}}
                                             color="textSecondary"
                                         >
-                                            {item}
+                                            {item.title}
                                         </Link>
                                     </li>
                                 ))}
