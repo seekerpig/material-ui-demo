@@ -51,13 +51,18 @@ const useStyles = makeStyles((theme) => ({
 
 function Features() {
     const classes = useStyles();
-    const [value, setValue] = React.useState(2);
+    
+    const [value, setValue] = React.useState(1);
     const [currentPage, setPage] = React.useState("OVERVIEW");
 
     const tabStatus = (event, newValue) => {
         setValue(newValue);
         setPage(event.target.innerText);
     };
+
+    
+
+
     return (
         <div className={classes.container}>
             <div className={classes.tabContainer}>
@@ -119,6 +124,7 @@ function Features() {
                         <Redirect to="/features/overview" />
                         </Route>
                         <Route path="/features/overview">
+                            
                             <div>
                                 <h2 style={{ marginTop: 0, paddingTop: 0 }}>
                                     What is TutorsDojo?

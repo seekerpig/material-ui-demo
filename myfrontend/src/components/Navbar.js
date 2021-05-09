@@ -108,7 +108,7 @@ function Navbar() {
                             
                 </ListItem>
                 <Divider/>
-                <ListItem button component={Link} to="/features">
+                <ListItem button component={Link} to={{pathname:"/features/calendarscheduling"}}>
                     <ListItemIcon>
                         <AppsIcon/>
                     </ListItemIcon>
@@ -176,7 +176,7 @@ function Navbar() {
                     </Typography>
                     <div className={classes.navItems}>
                         <div className={classes.navHideMobile}>
-                            <Button component={Link} to="/features">Features</Button>
+                            <Button component={Link} to="/features/calendarscheduling">Features</Button>
                             <Button component={Link} to="/pricing">Pricing</Button>
                             <Button component={Link} to="/contact">Contact</Button>
                             {/*<Button component={Link} to="/faq">FAQ</Button>*/}
