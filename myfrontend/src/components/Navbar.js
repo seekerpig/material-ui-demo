@@ -137,7 +137,7 @@ function Navbar() {
                     <ListItemText primary="Contact Us"/> 
                 </ListItem>
                 <Divider/>
-                <ListItem button component="a" href="https://app.tutorsdojo.com">
+                <ListItem button component="a" href="https://app.tutorsdojo.com/login">
                     <ListItemIcon>
                         <AccountBoxIcon/>
                     </ListItemIcon>
@@ -183,7 +183,7 @@ function Navbar() {
                         </div>
                         <div className={classes.loginDiv}>
                                 <Button
-                                    href="https://app.tutorsdojo.com"
+                                    href="https://app.tutorsdojo.com/login"
                                     variant="contained"
                                     color="primary"
                                     className={classes.loginButton}

@@ -44,7 +44,7 @@ const tiers = [
         ],
         buttonText: "Sign up for free",
         buttonVariant: "outlined",
-        linkUrl: "https://app.tutorsdojo.com/",
+        linkUrl: "https://app.tutorsdojo.com/login",
     },
     {
         title: "Pro",
@@ -58,7 +58,7 @@ const tiers = [
         ],
         buttonText: "Get started",
         buttonVariant: "contained",
-        linkUrl: "https://app.tutorsdojo.com/",
+        linkUrl: "https://app.tutorsdojo.com/login",
     },
     {
         title: "Enterprise",
