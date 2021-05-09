@@ -34,10 +34,10 @@ function App() {
             primary: {
                 main: "#007aff",
             },
-            /*
+            
             background:{
                 default:"#ffffff",
-            }*/
+            },
         },
         typography: {
             fontFamily: "Poppins, sans-serif",
@@ -129,7 +129,7 @@ function Home() {
             />
             <div style={{ backgroundColor: "#fafafa", marginBottom:"4rem", marginTop:"2rem" }}>
                 <CenterContainer
-                    greycontainer={true}
+                    greycontainer={false}
                     imgWidth="50%"
                     image="./images/reports1.png"
                     smalltitle="INSIGHTS"
@@ -137,7 +137,7 @@ function Home() {
                     subtitle="Analyze lessons hours, counts and revenue; invoice totals and payments received; teacher hours and payments, gross margins and much more."
                 />
                 <CenterContainer
-                    greycontainer={true}
+                    greycontainer={false}
                     imgWidth="50%"
                     image="./images/calendar1.png"
                     smalltitle="TRACKING"
@@ -152,7 +152,7 @@ function Home() {
                             manual work for you!"
                 />
                 <CenterContainer
-                    greycontainer={true}
+                    greycontainer={false}
                     imgWidth="50%"
                     image="./images/payment3.png"
                     smalltitle="AUTOMATED REMINDERS"
