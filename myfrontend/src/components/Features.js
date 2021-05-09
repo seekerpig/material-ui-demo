@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
 function Features() {
     const classes = useStyles();
     
-    const [value, setValue] = React.useState(1);
+    const [value, setValue] = React.useState(0);
     const [currentPage, setPage] = React.useState("OVERVIEW");
 
     const tabStatus = (event, newValue) => {
