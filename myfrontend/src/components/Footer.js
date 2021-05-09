@@ -32,7 +32,7 @@ const footers = [
     },
     {
       title: 'Features',
-      description: [{title:'Overview',link:'/features/overview'}, {title:'Student Management',link:'/features/keeptrackofstudents'}, {title:'Calender Scheduling',link:'/features/automaticreminders'}, {title:'Automatic Reminder',link:'/features/calendarscheduling'}, {title:'Online Payments',link:'/features/onlinepayments'}],
+      description: [{title:'Overview',link:'/features/overview'}, {title:'Scheduling and Management',link:'/features/calendarscheduling'}, {title:'Automatic Reminder',link:'/features/automaticreminders'}, {title:'Online Payments',link:'/features/onlinepayments'}],
     },
   ];
   
@@ -70,7 +70,7 @@ function Footer() {
             >
                 <Grid container spacing={4} justify="space-evenly">
                     {footers.map((footer) => (
-                        <Grid item xs={6} sm={3} key={footer.title}>
+                        <Grid item xs={6} sm={4} key={footer.title}>
                             <Typography
                                 variant="h6"
                                 color="textPrimary"

@@ -168,7 +168,6 @@ function Navbar() {
                     <Typography
                         variant="h1"
                         style={{ fontSize: "1.5rem" }}
-                        color="transparent"
                         className={classes.navTitle}
                     >
                         <Link className={classes.homeHref} to="/">

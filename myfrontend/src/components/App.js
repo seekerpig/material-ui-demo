@@ -5,7 +5,7 @@ import {
     Switch,
     Route,
     Link,
-    Redirect,
+    //Redirect,
 } from "react-router-dom";
 import { CssBaseline, Button } from "@material-ui/core";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -20,6 +20,7 @@ import LeftContainer from "./LeftContainer";
 import RightContainer from "./RightContainer";
 import Features from "./Features";
 import FormComponent from "./Form";
+import CenterContainer from "./CenterContainer";
 
 //import { orange } from '@material-ui/core/colors';
 
@@ -75,7 +76,6 @@ function App() {
                             <Home />
                         </Route>
                         <Route path="/features">
-                            <Redirect to="/features/overview" />
                             <Features />
                         </Route>
                         <Route path="/faq">
@@ -127,6 +127,40 @@ function Home() {
                 title="Automated Billing"
                 subtitle="Stop fussing over having to ask students for lesson payments, instead, we will help you send payment reminders, invoices and ensure that students complete their payments on time! We even have an analytics for payment, to show outstanding payments, how much you've earnt this month and etc."
             />
+            <div style={{ backgroundColor: "#fafafa", marginBottom:"4rem", marginTop:"2rem" }}>
+                <CenterContainer
+                    greycontainer={true}
+                    imgWidth="50%"
+                    image="./images/reports1.png"
+                    smalltitle="INSIGHTS"
+                    title="Track Analytics"
+                    subtitle="Analyze lessons hours, counts and revenue; invoice totals and payments received; teacher hours and payments, gross margins and much more."
+                />
+                <CenterContainer
+                    greycontainer={true}
+                    imgWidth="50%"
+                    image="./images/calendar1.png"
+                    smalltitle="TRACKING"
+                    title="Attendance"
+                    subtitle="TutorsDojo makes it easy to track student
+                            attendance with options for every situation.
+                            Choose from Present, Late, Absent, or Tutor
+                            Absent, then select the correct billing option.
+                            Each time a student’s attendance is taken, their
+                            Family Account will automatically be up to date
+                            with the correct charges, removing any extra
+                            manual work for you!"
+                />
+                <CenterContainer
+                    greycontainer={true}
+                    imgWidth="50%"
+                    image="./images/payment3.png"
+                    smalltitle="AUTOMATED REMINDERS"
+                    title="Payment Reminders"
+                    subtitle="Set up automated payment reminders to be sent at on any overdue payments. No more need to chase down payments again!"
+                />
+            </div>
+
             {/*<Cards/>*/}
         </div>
     );

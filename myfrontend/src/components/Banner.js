@@ -67,9 +67,9 @@ function Banner() {
                                 color="primary"
                                 endIcon={<ArrowRightIcon />}
                                 component={Link}
-                                to="/pricing"
+                                to="/features/calendarscheduling"
                             >
-                                Demo
+                                Features
                             </Button>
                         </Grid>
                     </Grid>

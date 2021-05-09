@@ -31,10 +31,9 @@ function TreeList({onPageChange}) {
             defaultEndIcon={<ChevronRightIcon />}
         >
             <TreeItem nodeId="1" label="Overview" onLabelClick={(e) => handleOnClick(e)}/>
-            <TreeItem nodeId="2" label="Keep Track Of Students" onLabelClick={(e) => handleOnClick(e)}/>
-            <TreeItem nodeId="3" label="Calendar Scheduling" onLabelClick={(e) => handleOnClick(e)}/>
-            <TreeItem nodeId="4" label="Automatic Reminders" onLabelClick={(e) => handleOnClick(e)}/>
-            <TreeItem nodeId="5" label="Online Payments" onLabelClick={(e) => handleOnClick(e)}/>
+            <TreeItem nodeId="2" label="Calendar Scheduling" onLabelClick={(e) => handleOnClick(e)}/>
+            <TreeItem nodeId="3" label="Automatic Reminders" onLabelClick={(e) => handleOnClick(e)}/>
+            <TreeItem nodeId="4" label="Online Payments" onLabelClick={(e) => handleOnClick(e)}/>
         </TreeView>
     );
 }

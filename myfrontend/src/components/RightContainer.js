@@ -11,8 +11,14 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom:'5rem',
     },
     gridreverse:{
-        [theme.breakpoints.down('md')]:{
+        [theme.breakpoints.down('sm')]:{
             flexDirection:"column-reverse",
+            alignItems:"flex-start"
+        },
+    },
+    alignLeft:{
+        [theme.breakpoints.down('sm')]:{
+            textAlign:"left",
         },
     },
 
@@ -27,9 +33,9 @@ function RightContainer({image,title,subtitle}) {
                     <Grid item xs={12} md={6}>
                         <img alt={title} src={require(`${image}`).default} />
                     </Grid>
-                    <Grid item xs={12} md={6}>
-                        <Typography variant="h5" align="right">{title}</Typography>
-                        <Typography variant="body1" align="right">
+                    <Grid item xs={12}md={6}>
+                        <Typography className={classes.alignLeft} variant="h5" align="right">{title}</Typography>
+                        <Typography className={classes.alignLeft} variant="body1" align="right">
                             {subtitle}
                         </Typography>
                     </Grid>
