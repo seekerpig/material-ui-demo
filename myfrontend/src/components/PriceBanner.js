@@ -11,7 +11,6 @@ import {
 } from "@material-ui/core";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import { makeStyles } from "@material-ui/core/styles";
-import {Link} from "react-router-dom"
 
 const useStyles = makeStyles((theme) => ({
     priceContainer:{
@@ -45,7 +44,7 @@ const tiers = [
         ],
         buttonText: "Sign up for free",
         buttonVariant: "outlined",
-        linkUrl: "./login",
+        linkUrl: "https://app.tutorsdojo.com/",
     },
     {
         title: "Pro",
@@ -59,7 +58,7 @@ const tiers = [
         ],
         buttonText: "Get started",
         buttonVariant: "contained",
-        linkUrl: "./login",
+        linkUrl: "https://app.tutorsdojo.com/",
     },
     {
         title: "Enterprise",
@@ -163,8 +162,7 @@ function Banner() {
                                         fullWidth
                                         variant={tier.buttonVariant}
                                         color="primary"
-                                        component={Link}
-                                        to={tier.linkUrl}
+                                        href={tier.linkUrl}
                                     >
                                         {tier.buttonText}
                                     </Button>
