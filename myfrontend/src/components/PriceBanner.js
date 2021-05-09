@@ -72,7 +72,7 @@ const tiers = [
         ],
         buttonText: "Contact us",
         buttonVariant: "outlined",
-        linkUrl: "./login",
+        linkUrl: "./contact",
     },
 ];
 function Banner() {

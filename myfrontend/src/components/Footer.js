@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 const footers = [
     {
       title: 'Company',
-      description: [{title:'Home',link:'/'}, {title:'Pricing',link:'/pricing'}, {title:'Contact Us',link:'/contact'}, {title:'Get Started',link:'/https://app.tutorsdojo.com'}],
+      description: [{title:'Home',link:'/'}, {title:'Pricing',link:'/pricing'}, {title:'Contact Us',link:'/contact'}, {title:'Get Started',link:'https://app.tutorsdojo.com'}],
     },
     {
       title: 'Features',
@@ -84,7 +84,7 @@ function Footer() {
                                         <Link
                                             href={item.link}
                                             variant="subtitle2"
-                                            style={{fontSize:'0.9rem'}}
+                                            style={{fontSize:'0.9rem', fontWeight:'400'}}
                                             color="textSecondary"
                                         >
                                             {item.title}

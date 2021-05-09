@@ -2,6 +2,7 @@ import React from "react";
 import { Typography, Grid, Button, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     buttons: {
@@ -56,7 +57,7 @@ function Banner() {
                 <div className={classes.buttons}>
                     <Grid container spacing={2} justify="center">
                         <Grid item>
-                            <Button variant="contained" color="primary">
+                            <Button variant="contained" color="primary" component={Link} to="/pricing">
                                 Get Started (Free)
                             </Button>
                         </Grid>
@@ -65,6 +66,8 @@ function Banner() {
                                 variant="contained"
                                 color="primary"
                                 endIcon={<ArrowRightIcon />}
+                                component={Link}
+                                to="/pricing"
                             >
                                 Demo
                             </Button>
